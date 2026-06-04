@@ -1,0 +1,5 @@
+# GitHub Pages configuration for Vital Structura
+# Disables Jekyll processing — serves the HTML file as-is.
+# Required so filenames starting with _ and the og-image.png are served correctly.
+
+plugins: []

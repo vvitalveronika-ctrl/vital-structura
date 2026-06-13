@@ -547,6 +547,71 @@ a { color: inherit; }
 .service-col p + p { margin-top: 10px; }
 
 /* ═══════════════════════════════════════════════
+   INSIGHTS
+═══════════════════════════════════════════════ */
+.insights { background: var(--bg-subtle); }
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.insight-card {
+  background: var(--bg);
+  border-top: var(--bar-thin) solid var(--bar);
+  padding: 28px 26px 30px;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.2s;
+}
+.insight-card:hover { background: #f8fafc; }
+
+.insight-card-label {
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-meta);
+  margin-bottom: 14px;
+}
+
+.insight-card-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--navy);
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.insight-card-desc {
+  font-size: 13.5px;
+  color: var(--text-body);
+  line-height: 1.72;
+  flex-grow: 1;
+  margin-bottom: 24px;
+}
+
+.insight-card-action {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--navy);
+  text-decoration: none;
+  border-bottom: 1px solid var(--navy-lt);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+  align-self: flex-start;
+}
+.insight-card-action:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ═══════════════════════════════════════════════
    BACKGROUND
 ═══════════════════════════════════════════════ */
 .background { background: var(--bg-subtle); }
@@ -604,7 +669,6 @@ a { color: inherit; }
   object-fit: cover;
   border: 3px solid var(--rule);
   background: var(--bg-card);
-  /* Ensure it renders sharply */
   image-rendering: -webkit-optimize-contrast;
 }
 .bg-portrait-meta {
@@ -771,6 +835,7 @@ footer span {
   .service-item { grid-template-columns: 1fr; gap: 28px; }
   .bg-grid { grid-template-columns: 1fr; gap: 48px; }
   .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .insights-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
 }
 
 @media (max-width: 640px) {
@@ -788,6 +853,7 @@ footer span {
   .footer-inner { flex-direction: column; align-items: flex-start; gap: 4px; }
   .bg-portrait { width: 88px; height: 88px; }
   .bg-portrait-name { font-size: 17px; }
+  .insights-grid { grid-template-columns: 1fr; gap: 10px; }
 }
 
 /* ═══════════════════════════════════════════════
@@ -820,6 +886,7 @@ footer span {
       <a href="#situations">When I'm brought in</a>
       <a href="#how">How I work</a>
       <a href="#services">Services</a>
+      <a href="#insights">Insights</a>
       <a href="#background">Background</a>
       <a href="#contact" class="nav-cta">Contact</a>
     </div>
@@ -831,6 +898,7 @@ footer span {
     <a href="#situations" class="mob-link">When I'm brought in</a>
     <a href="#how" class="mob-link">How I work</a>
     <a href="#services" class="mob-link">Services</a>
+    <a href="#insights" class="mob-link">Insights</a>
     <a href="#background" class="mob-link">Background</a>
     <a href="#contact" class="nav-cta-mob mob-link">Contact</a>
   </div>
@@ -1020,6 +1088,44 @@ footer span {
           <p>Role and accountability clarification, priority resolution, cross-functional operating model, facilitated alignment sessions.</p>
           <p>Combination of structured workshops and ongoing advisory support. Targeted interventions anchored in current work, not generic training.</p>
         </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     INSIGHTS
+══════════════════════════════════ -->
+<section class="section insights" id="insights">
+  <div class="wrap">
+    <div class="section-header reveal">
+      <div class="rule-bar"></div>
+      <p class="section-kicker">Insights</p>
+      <h2>Selected papers and structural observations</h2>
+      <p>Short papers and visual materials exploring recurring patterns in complex programs, portfolios and transformations.</p>
+    </div>
+    <div class="insights-grid">
+
+      <div class="insight-card reveal reveal-delay-1">
+        <div class="insight-card-label">Executive Insight Paper</div>
+        <div class="insight-card-title">Why Transformations Stall</div>
+        <p class="insight-card-desc">A structural diagnostic perspective on governance overload, decision latency, visibility gaps, portfolio drift and false escalation.</p>
+        <a href="why-transformations-stall.pdf" target="_blank" rel="noopener" class="insight-card-action">Download PDF</a>
+      </div>
+
+      <div class="insight-card reveal reveal-delay-2">
+        <div class="insight-card-label">Visual Insight</div>
+        <div class="insight-card-title">Programs Stall Before They Fail</div>
+        <p class="insight-card-desc">A visual overview of why programs can appear controlled while execution quietly loses momentum.</p>
+        <a href="VS_Programs Stall_Carousel.pdf" target="_blank" rel="noopener" class="insight-card-action">View PDF</a>
+      </div>
+
+      <div class="insight-card reveal reveal-delay-3">
+        <div class="insight-card-label">Visual Insight</div>
+        <div class="insight-card-title">Decision Clarity in Complex Environments</div>
+        <p class="insight-card-desc">A short visual piece on how complexity affects decision-making, visibility and leadership clarity.</p>
+        <a href="VS_Decisionn clarity in complex environments_Carousel.pdf" target="_blank" rel="noopener" class="insight-card-action">View PDF</a>
       </div>
 
     </div>
